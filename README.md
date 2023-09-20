@@ -31,3 +31,11 @@ $x=\{x_1,...,x_n\}$, $K=\{K_1,...,K_n\}$
 $e_K(x)=x\ \oplus K$
 
 $d_K(y)=y\ \oplus K$
+
+## DES: Round Key Schedule
+
+`DES-key.py`
+
+## AES128: Round Key Schedule
+
+`AES128-key.py`
