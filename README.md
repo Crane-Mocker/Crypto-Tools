@@ -39,3 +39,29 @@ $d_K(y)=y\ \oplus K$
 ## AES128: Round Key Schedule
 
 `AES128-key.py`
+
+## RSA
+
+`egcd()` extended euclidean algorithm
+
+Input: a, b (a > b)
+Output: x, y, where ax + by = gcd(a, b)
+
+`solve_congruences_system()`
+
+Use Chinese Remainder Theorem to solve a system of congruences:
+The system of r congruences $x \equiv a_i (\mod m_i), 1 \le i \le r$
+has a unique solution modulo $M = m1 * m2...*m_r$, which is given by
+$X = \sum_{i = 1}^{r} a_i\ M_i\ y_i (\mod M)$
+Where $M_i = M/m_i$ and $y_i = M_i^{-1}(\mod m_i), 1 \le i \le r$
+
+Input: a[], m[], where m[i], m[j] are pair-wise relatively prime
+
+`calc_keys()`
+
+Calculate keys
+Input: p, q
+Choose: e = 65537
+Output: N, phi_N, d
+pubkey: (N, e)
+prikey: (N, d) 
