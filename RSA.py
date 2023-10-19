@@ -69,7 +69,6 @@ prikey: (N, d)
 def calc_keys(p, q):
     N = p*q
     phi_N = (p-1)*(q-1)
-    e = 65537
     d = mod_inverse(e, phi_N)
     return N, phi_N, e, d
 
@@ -98,6 +97,7 @@ def RSA_enc(N, e, s):
 
 p = 139
 q = 173
+e = 7
 N, phi_N, e, d = calc_keys(p, q)
 print(f"When p={p}, q={q}. N={N}, phi_N={phi_N}, d={d}")
 print(f"Public key: ({N}, {e})")

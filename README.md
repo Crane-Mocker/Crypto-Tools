@@ -65,3 +65,13 @@ Choose: e = 65537
 Output: N, phi_N, d
 pubkey: (N, e)
 prikey: (N, d) 
+
+**RSA Key generation algorithm (original):**
+
+- Generate 2 large random primes, p and q, of approximately equal size such that their product n=pq is of the required bit length
+- Compute N=pq and $\phi(N)$ =(p−1)(q−1)
+- Choose an integer e, $1 \lt e \lt \phi(N)$, such that gcd(e, $\phi(N)$) = 1
+- Compute the secret exponent d, $1 \lt d \lt \phi(N)$, such that $ed \equiv 1 \mod \phi(N)$
+- The public key is (N, e) and the private key is (d, p, q). Private key also can be written as (N, d)
+
+e can be chosen from 3,5,17,257,65537
