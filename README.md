@@ -93,4 +93,8 @@ $m = c^d \mod N$
 
 ## Pollard’s Rho Algorithm
 
-for prime factorization
+for factorization
+
+## Dixon's Random Squares Method
+
+for factorization
