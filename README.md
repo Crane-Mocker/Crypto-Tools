@@ -75,3 +75,18 @@ prikey: (N, d)
 - The public key is (N, e) and the private key is (d, p, q). Private key also can be written as (N, d)
 
 e can be chosen from 3,5,17,257,65537
+
+**Encryption**
+
+Input: pubkey + plaintext
+
+$c = m^e \mod N$
+
+m - plaintext (int)
+c - ciphertext (int)
+
+**Decryption**
+
+Input: prikey + ciphertext
+
+$m = c^d \mod N$
