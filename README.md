@@ -90,3 +90,7 @@ c - ciphertext (int)
 Input: prikey + ciphertext
 
 $m = c^d \mod N$
+
+## Pollard’s Rho Algorithm
+
+for prime factorization
