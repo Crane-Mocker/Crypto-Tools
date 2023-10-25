@@ -10,7 +10,6 @@ def dixon(n):
     square_pairs = []
 
     # find x^2 \equiv y^2 (mod n)
-    #for x in range(500, 526): # [500, 525]
     for x in range(int(sqrt(n)), n):
         for i in range(len(base)): # y's index
             x2 = x ** 2 % n # x^2
@@ -24,7 +23,7 @@ def dixon(n):
         factor = gcd(square_pairs[i][0] - square_pairs[i][1], n)
         if factor != 1:
             factors.append(factor)
-    
+
     return set(factors)
 
 # test
