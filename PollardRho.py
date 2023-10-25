@@ -36,4 +36,4 @@ def PollardRho(n):
 n_list = [262063, 9420457, 181937053]
 for n in n_list:
     d, i = PollardRho(n)
-    print(f"n={n}, d={d}, i={i}")
+    print(f"n={n}, d1={d}, d2={n//d}, i={i}")
