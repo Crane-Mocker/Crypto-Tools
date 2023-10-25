@@ -1,3 +1,5 @@
+from libnum import nroot
+
 """
 Input: a, b (a > b)
 Output: x, y, where ax + by = gcd(a, b)
@@ -160,6 +162,16 @@ def factoring(n):
             factors_list.append(n // i)
     return factors_list
 
+"""
+Hastad’s Broadcast Attack
+Input: N_list, a list of N, len >= 3
+       c_list, a list of c, len >= 3    
+"""
+def hastadBroadcastAttack(N_list, c_list):
+    res = solve_congruences_system(c_list, N_list)
+    m = nroot(res, 3)
+    print(f"For e={e}, N:{N_list}, c:{c_list}, m={m}")
+    return num2block(m)
 
 # test
 
@@ -210,3 +222,14 @@ _, _, _, d = calc_keys(p, q)
 print(f"p:{p}, q:{q}, d:{d}")
 plaintext = RSA_dec(N, d, ciphertext)
 print("Plaintext: ", plaintext)
+
+# Hastad's Broadcast attack
+print("----Hastad's Broadcast attack----")
+N_list = [25777, 22879, 66277]
+c1 = [19052, 4546, 44619]
+c2 = [1708, 11733, 19731]
+e = 3 
+plaintext1 = hastadBroadcastAttack(N_list, c1)
+print("Plaintext: ", plaintext1)
+plaintext2 = hastadBroadcastAttack(N_list, c2)
+print("Plaintext: ", plaintext2)

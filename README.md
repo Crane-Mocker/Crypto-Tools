@@ -98,3 +98,9 @@ for factorization
 ## Dixon's Random Squares Method
 
 for factorization
+
+## Hastad's Broadcast attack
+
+`hastad-broadcast-attack.py`
+
+`hastadBroadcastAttack()` in `RSA.py`
