@@ -97,7 +97,42 @@ for factorization
 
 ## Dixon's Random Squares Method
 
-for factorization
+Idea: construct $n = x^2 - y^2 = (x + y)(x - y) $ for factorization
+
+Find $x, y$ with $x \ne \pm y (\mod n)$ and $x^2 \equiv y^2 (\mod n)$
+
+So $x^2 - y^2 = (x+y)(x-y) \equiv 0 (\mod n)$
+
+$\because x \pm y \not\equiv 0(\mod n)$
+
+$\therefore gcd(x \pm y, n)$ are non-trivial factors for $n$
+
+-----
+
+Given $n$, $T=\{z_1, z_2, ... ,z_k\}$, $B=\{p_1, p_2, ... ,p_k\}$(Base)
+
+$z_i^2 \equiv p_1^{e_1} p_2^{e_2} ... p_k^{e_k} (\mod n)$
+
+Assign exponent vector to the right-hand side of the congruence:
+
+$a_i = (e_1, e_2, ..., e_k)$
+
+Multiplying right-hand sides <-> Adding exponent vactors
+
+Perfect square <-> Exponent vector with even components
+
+-----
+
+**Recipes of T**
+
+- $z = j + \lceil \sqrt{kn} \rceil (\mod n)$, $j = 0,1,...$, $k = 1,2,...$. Yields $z^2 (\mod n)$ that are small
+- $z = \lfloor \sqrt{kn} \rfloor (mod n)$, $k = 1, 2, ...$. Yields $-z^2(\mod n)$ that are small
+
+-----
+
+**Factor-Base B**
+
+Factor base is a small set of prime numbers
 
 ## Hastad's Broadcast attack
 
