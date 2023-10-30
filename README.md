@@ -134,6 +134,14 @@ Perfect square <-> Exponent vector with even components
 
 Factor base is a small set of prime numbers
 
+----
+
+- v0: simply 2 loops
+- v1: find the power set of the set containing all exponent vectors. For each subset, check whether the perfect square can be constructed.
+- v2: according to the exponent vectors, set constraints and solve with `z3` solver
+
+![](pic/dixon.png)
+
 ## Hastad's Broadcast attack
 
 `hastad-broadcast-attack.py`

@@ -2,6 +2,7 @@ from math import sqrt, gcd
 
 """
 Dixon's random squares method for factorization
+Simply find x^2 \equiv y^2 (mod n) with 2 loops
 """
 
 def dixon(n):

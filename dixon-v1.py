@@ -3,6 +3,8 @@ from itertools import chain, combinations
 
 """
 Dixon's random squares method for factorization
+Find the power set of the set of all exponent vectors
+Then test each subset to see if it constructs perfect square
 """
 
 base = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31]
