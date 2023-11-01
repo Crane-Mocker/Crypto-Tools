@@ -97,6 +97,12 @@ $m = c^d \mod N$
 
 `RSA-dec-table.txt`: then decryption table
 
+**Hastad's Broadcast attack**
+
+`hastad-broadcast-attack.py`
+
+`hastadBroadcastAttack()` in `RSA.py`
+
 ## Pollard’s Rho Algorithm
 
 for factorization
@@ -147,9 +153,3 @@ Factor base is a small set of prime numbers
 - v2: according to the exponent vectors, set constraints and solve with `z3` solver
 
 ![](pic/dixon.png)
-
-## Hastad's Broadcast attack
-
-`hastad-broadcast-attack.py`
-
-`hastadBroadcastAttack()` in `RSA.py`
