@@ -91,6 +91,12 @@ Input: prikey + ciphertext
 
 $m = c^d \mod N$
 
+**Rainbow table**
+
+`RSA-decryption-table.py`: generate decryption table (`RSA-dec-table.txt`)
+
+`RSA-dec-table.txt`: then decryption table
+
 ## Pollard’s Rho Algorithm
 
 for factorization

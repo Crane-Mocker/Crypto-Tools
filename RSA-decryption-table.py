@@ -55,10 +55,10 @@ print("Plaintext generate.")
 ciphertext = genCiphertextList(N, e, plaintext)
 print("Decryption table constructed.")
 
-f = open('dec-table.txt', 'a') 
+f = open('RSA-dec-table.txt', 'a') 
 for i in range(len(plaintext)):
     f.write(str(plaintext[i]))
     f.write(str(ciphertext[i]))
     f.write("\n")
 f.close()
-print("Decryption table saved at dec-table.txt.")
+print("Decryption table saved at RSA-dec-table.txt.")
