@@ -153,3 +153,21 @@ Factor base is a small set of prime numbers
 - v2: according to the exponent vectors, set constraints and solve with `z3` solver
 
 ![](pic/dixon.png)
+
+## ElGamal
+
+`elGamal.py`
+
+Let $p$ be a large prime, and $\alpha \in \mathbb{Z}_p$ a prime element.
+
+Define the plaintext space as $\mathbb{P} = \mathbb{Z}_p*$
+
+Set the keyspace as $\mathbb{K} = \{(p, \alpha, a, \beta): \beta \equiv \alpha^a (\mod p) \}$
+
+PubKey: $(p, \alpha, \beta)$
+
+PriKey: a, the secret exponent
+
+Encryption: $e_k(x, k) = (y_1, y_2)$, where $y_1 \equiv a^k (\mod p)$ and $y_2 \equiv x \beta^k (\mod p)$
+
+Decryption: take $(y_1, y_2) \in \mathbb{C}$, $d_k(y_1, y_2) = y_2(y_1^a)^{-1} (\mod p)$
