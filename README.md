@@ -171,3 +171,13 @@ PriKey: a, the secret exponent
 Encryption: $e_k(x, k) = (y_1, y_2)$, where $y_1 \equiv a^k (\mod p)$ and $y_2 \equiv x \beta^k (\mod p)$
 
 Decryption: take $(y_1, y_2) \in \mathbb{C}$, $d_k(y_1, y_2) = y_2(y_1^a)^{-1} (\mod p)$
+
+## Shanks Baby Step Giant Step
+
+`shanks.py`
+
+Find x, such $\alpha^x \equiv \beta (\mod p)$
+
+$x = log_{\alpha} \beta$
+
+p should be prime
