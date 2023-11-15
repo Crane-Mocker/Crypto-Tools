@@ -22,6 +22,15 @@ def find_points_on_curve(a, b, p):
                     break
     return points
 
+# Let y = 0, find roots
+def find_roots(a, b, p):
+    roots = []
+    for x in range(p):
+        if (x ** 3 + a*x + b) % p == 0:
+            roots.append(x)
+    return roots
+
+
 def point_negate(P, p):
     return (P[0], -P[1] % p)
 
@@ -121,6 +130,8 @@ p = 71
 print(f"Find all points on curve y^2 = x^3 + {a}x + {b} mod {p}")
 points_on_curve = find_points_on_curve(a, b, p)
 print(points_on_curve)
+print("Let y=0, roots are: ", find_roots(a, b, p))
+print("When x=0, it is a point at infinity")
 
 a = 1
 b = 26
