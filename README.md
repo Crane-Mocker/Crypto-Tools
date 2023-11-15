@@ -184,11 +184,11 @@ p should be prime
 
 ## Simple Elliptic Curve-Based Cryptosytem
 
-$(x, y) is a point on y^2 = x^3 + ax +b (\mod p)$
+(x, y) is a point on $y^2 = x^3 + ax +b (\mod p)$
 
-$point-compress((x, y)) = (x, y (\mod 2))$
+point-compress((x, y)) = $(x, y (\mod 2))$
 
-$point-decompress((x, parity)) = (x, y)$
+point-decompress((x, parity)) = $(x, y)$
 
 - parity = 0, y = Even square root (mod p) of f(x)
 - parity = 1, y = Odd square root (mod p) of f(x)
@@ -209,6 +209,6 @@ Decryption:
 
 Given ciphertext pair $(y_1, y_2), y_1 = (x, parity)$
 
-$(x_0, y_0) = m \cdot point-decompress(y_1)$
+$(x_0, y_0) = m \cdot$ point-decompress$(y_1)$
 
 $d_K(y) = y_2(x_0)^{-1} \mod p$
