@@ -181,3 +181,34 @@ Find x, such $\alpha^x \equiv \beta (\mod p)$
 $x = log_{\alpha} \beta$
 
 p should be prime
+
+## Simple Elliptic Curve-Based Cryptosytem
+
+$(x, y) is a point on y^2 = x^3 + ax +b (\mod p)$
+
+$point-compress((x, y)) = (x, y (\mod 2))$
+
+$point-decompress((x, parity)) = (x, y)$
+
+- parity = 0, y = Even square root (mod p) of f(x)
+- parity = 1, y = Odd square root (mod p) of f(x)
+
+Plaintext space $\mathbb{P} = \mathbb{Z}^{*}_p$
+
+Ciphertext space $\mathbb{C} =(\mathbb{Z}_p \times \mathbb{Z}_2) \times \mathbb{Z}^{*}_p$
+
+Keyspace $\mathbb{K} = \{(E, P, m, Q, n): Q = m \cdot P\}$
+
+Pubkey: $(E, P, Q, n)$
+
+Prikey: m
+
+Encryption: $e_K(x, k) = (point-compress(kP), xx_0 (\mod p))$
+
+Decryption: 
+
+Given ciphertext pair $(y_1, y_2), y_1 = (x, parity)$
+
+$(x_0, y_0) = m \cdot point-decompress(y_1)$
+
+$d_K(y) = y_2(x_0)^{-1} \mod p$
